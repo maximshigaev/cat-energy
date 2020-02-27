@@ -1,0 +1,33 @@
+.button {
+  display: inline-block;
+  width: calc(100% - 40px);
+  height: 40px;
+  padding-top: 11px;
+
+  font-size: 14px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: $mainGreenColor;
+
+  &:hover,
+  &:focus {
+    background-color: $hoverGreenColor;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (min-width: $tabletWidth) {
+  .button {
+    width: 245px;
+    height: 52px;
+    padding-top: 16px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

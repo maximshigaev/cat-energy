@@ -1,0 +1,7 @@
+{
+  "extends": "stylelint-config-htmlacademy",
+
+  "rules": {
+     "string-quotes": "single"
+  }
+}

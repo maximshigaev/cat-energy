@@ -1,0 +1,408 @@
+.options {
+  position: relative;
+
+  border-top: 1px solid #e6e6e6;
+}
+
+.options__container {
+  min-height: 305px;
+  padding-top: 27px;
+
+  background-color: $hoverGreenColor;
+  background-image: url('../img/options/index-background-mobile@1x.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 320px 305px;
+
+  @include retinaOneBgr('../img/options/index-background-mobile@2x.jpg');
+}
+
+.options__heading {
+  margin-bottom: 26px;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.options__question {
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.options__button {
+  position: absolute;
+  top: 440px;
+  right: 20px;
+  left: 20px;
+}
+
+.options__list {
+  margin-top: -139px;
+  padding-top: 337px;
+
+  background-image: url('../img/options/index-can-mobile@1x.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 280px 271px;
+
+  @include retinaOneBgr('../img/options/index-can-mobile@2x.png');
+}
+
+.options__item {
+  position: relative;
+
+  margin-bottom: 20px;
+  padding-top: 29px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: #f2f2f2;
+
+  &--slim {
+    &::after {
+      top: 22px;
+      left: 30px;
+
+      width: 35px;
+      height: 49px;
+
+      background-image: url('../img/options/icon-cat-slim.svg');
+    }
+  }
+
+  &--pro {
+    &::after {
+      top: 35px;
+      left: 13px;
+
+      width: 67px;
+      height: 28px;
+
+      background-image: url('../img/options/icon-cat-pro.svg');
+    }
+  }
+
+  &::before {
+    top: 24px;
+    left: 22px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: $mainGreenColor;
+    border-radius: 50%;
+
+    @include pseudoElement();
+  }
+
+  &::after {
+    @include pseudoElement();
+  }
+}
+
+.options__title {
+  margin-bottom: 29px;
+  padding-left: 70px;
+
+  font-weight: 400;
+  line-height: 37px;
+  color: $blackFontColor;
+  text-transform: uppercase;
+}
+
+.options__content {
+  margin-bottom: 18px;
+  padding-bottom: 22px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $subFont;
+  color: $subBlackFontColor;
+
+  border-bottom: 1px solid #dadada;
+}
+
+.options__link {
+  position: relative;
+
+  display: inline-block;
+  margin-bottom: 23px;
+
+  line-height: 16px;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    svg {
+      right: -45px;
+
+      width: 33px;
+    }
+
+    .options__arrowHover {
+      display: block;
+    }
+
+    .options__arrow {
+      display: none;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.options__link svg {
+  position: absolute;
+  top: 3px;
+  right: -36px;
+}
+
+.options__arrowHover {
+  display: none;
+}
+
+@media (min-width: $tabletWidth) {
+  .options {
+    border-top: none;
+  }
+
+  .options__heading {
+    margin-bottom: 41px;
+    padding-right: 117px;
+    padding-left: 117px;
+
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: $blackFontColor;
+  }
+
+  .options__container {
+    min-height: auto;
+    margin-bottom: 48px;
+    padding-top: 42px;
+
+    background-color: white;
+    background-image: none;
+
+    @media (min-resolution: $retinaDpi), (min-resolution: $retinaDppx) {
+      background-image: none;
+    }
+  }
+
+  .options__question {
+    margin-bottom: 48px;
+    padding-right: 118px;
+    padding-left: 118px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: $blackFontColor;
+  }
+
+  .options__list {
+    margin-top: -128px;
+    padding-top: 609px;
+
+    background-image: url('../img/options/index-can-tablet@1x.jpg');
+    background-size: 709px 609px;
+
+    @include retinaOneBgr('../img/options/index-can-tablet@2x.jpg');
+  }
+
+  .options__button {
+    position: static;
+
+    margin-left: 119px;
+  }
+
+  .options__item {
+    margin-bottom: 30px;
+    padding-top: 75px;
+    padding-right: 53px;
+    padding-left: 53px;
+
+    &::before {
+      top: 92px;
+      right: 62px;
+      left: auto;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim {
+      &::after {
+        top: 80px;
+        right: 92px;
+        left: auto;
+
+        width: 140px;
+        height: 194px;
+      }
+    }
+
+    &--pro {
+      &::after {
+        top: 135px;
+        right: 28px;
+        left: auto;
+
+        width: 268px;
+        height: 112px;
+      }
+    }
+  }
+
+  .options__title {
+    margin-bottom: 26px;
+    padding-left: 0;
+
+    font-size: 36px;
+  }
+
+  .options__content {
+    margin-bottom: 34px;
+    padding-right: 228px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    border-bottom: none;
+  }
+
+  .options__item--pro .options__content {
+    padding-right: 258px;
+  }
+
+  .options__link {
+    margin-bottom: 62px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &:hover,
+    &:focus {
+      svg {
+        right: -57px;
+      }
+    }
+  }
+
+  .options__link svg {
+    top: 4px;
+    right: -48px;
+  }
+}
+
+@media (min-width: $desktopWidth) {
+  .options__container {
+    position: relative;
+
+    min-height: 696px;
+    margin-bottom: 0;
+    padding-top: 221px;
+    padding-right: 57.64%;
+    padding-bottom: 290px;
+    padding-left: 75px;
+
+    background-image: url('../img/options/index-can-desktop@1x.png'), url('../img/options/index-background-desktop@1x.jpg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 63.1% 142px, top right;
+    background-size: 552px 499px, 50%;
+
+    @include retinaTwoBgr('../img/options/index-can-desktop@2x.png', '../img/options/index-background-desktop@2x.jpg');
+  }
+
+  .options__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-right: -40px;
+    margin-left: -40px;
+    padding-top: 80px;
+
+    background-image: none;
+
+    @media (min-resolution: $retinaDpi), (min-resolution: $retinaDppx) {
+      background-image: none;
+    }
+  }
+
+  .options__question {
+    margin-bottom: 0;
+  }
+
+  .options__heading {
+    margin-bottom: 42px;
+    padding-right: 0;
+  }
+
+  .options__button {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 188px;
+    left: 73px;
+  }
+
+  .options__item {
+    width: calc(50% - 80px);
+    margin-right: 40px;
+    margin-left: 40px;
+
+    &--slim {
+      &::after {
+        top: 41px;
+        left: 66px;
+
+        width: 70px;
+        height: 97px;
+      }
+    }
+
+    &--pro {
+      &::after {
+        top: 69px;
+        left: 34px;
+
+        width: 134px;
+        height: 56px;
+      }
+    }
+
+    &::before {
+      top: 47px;
+      right: auto;
+      left: 52px;
+
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .options__title {
+    margin-bottom: 75px;
+    padding-left: 163px;
+  }
+
+  .options__content {
+    margin-bottom: 32px;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .options__item--pro .options__content {
+    padding-right: 0;
+  }
+}

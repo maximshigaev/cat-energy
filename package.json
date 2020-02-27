@@ -1,0 +1,55 @@
+{
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "webpack-dev-server --mode development --open",
+		"build": "npm run clean && webpack --mode production",
+		"clean": "rimraf build",
+		"htmlhint": "htmlhint src/index.html",
+		"stylelint": "stylelint src/sass"
+	},
+	"browserslist": [
+		"> 1%",
+		"last 3 version"
+	],
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "7.8.4",
+		"@babel/preset-env": "7.8.4",
+		"babel-loader": "8.0.6",
+		"copy-webpack-plugin": "5.0.5",
+		"css-loader": "3.2.0",
+		"css-mqpacker": "7.0.0",
+		"csscomb": "4.3.0",
+		"cssnano": "4.1.10",
+		"eslint": "6.8.0",
+		"eslint-config-htmlacademy": "0.5.2",
+		"esm": "3.2.25",
+		"extract-text-webpack-plugin": "3.0.2",
+		"file-loader": "5.0.2",
+		"html-webpack-plugin": "3.2.0",
+		"htmlhint": "0.11.0",
+		"image-webpack-loader": "^6.0.0",
+		"imagemin-webp-webpack-plugin": "3.3.1",
+		"mini-css-extract-plugin": "0.8.0",
+		"node-sass": "4.13.0",
+		"postcss-loader": "3.0.0",
+		"rimraf": "3.0.0",
+		"sass-loader": "8.0.0",
+		"style-loader": "1.0.1",
+		"stylelint": "12.0.0",
+		"stylelint-config-htmlacademy": "0.1.x",
+		"url-loader": "3.0.0",
+		"webpack": "4.41.2",
+		"webpack-cli": "3.3.10",
+		"webpack-dev-server": "3.9.0"
+	},
+	"dependencies": {
+		"autoprefixer": "9.7.4",
+		"inputmask": "^5.0.3",
+		"npm-lifecycle": "3.1.4",
+		"path": "0.12.7",
+		"regenerator-runtime": "^0.13.3"
+	}
+}

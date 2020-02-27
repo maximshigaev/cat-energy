@@ -1,0 +1,16 @@
+{
+    "parserOptions": { "ecmaVersion": 2019, "sourceType": "module" },
+    "env": { "es6": true, "commonjs": true, "browser": true },
+    "extends": "htmlacademy/es6",
+	"globals": {
+		"$": true
+	},
+    "rules":
+        {
+            "indent": ["error", "tab"],
+            "space-before-function-paren": ["error", "never"],
+			"object-curly-spacing": ["error", "always"],
+			"no-unused-expressions": [2, { "allowTernary": true }],
+			"no-labels": ["error", { "allowLoop": true }]
+        }
+}
