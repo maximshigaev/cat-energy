@@ -9,12 +9,12 @@
   padding-top: 27px;
 
   background-color: $hoverGreenColor;
-  background-image: url('../img/options/index-background-mobile@1x.jpg');
+  background-image: url($optionsPath + 'index-background-mobile@1x.jpg');
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 320px 305px;
 
-  @include retinaOneBgr('../img/options/index-background-mobile@2x.jpg');
+  @include retinaOneBgr($optionsPath + 'index-background-mobile@2x.jpg');
 }
 
 .options__heading {
@@ -46,12 +46,12 @@
   margin-top: -139px;
   padding-top: 337px;
 
-  background-image: url('../img/options/index-can-mobile@1x.png');
+  background-image: url($optionsPath + 'index-can-mobile@1x.png');
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 280px 271px;
 
-  @include retinaOneBgr('../img/options/index-can-mobile@2x.png');
+  @include retinaOneBgr($optionsPath + 'index-can-mobile@2x.png');
 }
 
 .options__item {
@@ -72,11 +72,13 @@
       width: 35px;
       height: 49px;
 
-      background-image: url('../img/options/icon-cat-slim.svg');
+      background-image: url($optionsPath + 'icon-cat-slim.svg');
     }
   }
 
   &--pro {
+    margin-bottom: 0;
+
     &::after {
       top: 35px;
       left: 13px;
@@ -84,7 +86,7 @@
       width: 67px;
       height: 28px;
 
-      background-image: url('../img/options/icon-cat-pro.svg');
+      background-image: url($optionsPath + 'icon-cat-pro.svg');
     }
   }
 
@@ -214,10 +216,10 @@
     margin-top: -128px;
     padding-top: 609px;
 
-    background-image: url('../img/options/index-can-tablet@1x.jpg');
+    background-image: url($optionsPath + 'index-can-tablet@1x.jpg');
     background-size: 709px 609px;
 
-    @include retinaOneBgr('../img/options/index-can-tablet@2x.jpg');
+    @include retinaOneBgr($optionsPath + 'index-can-tablet@2x.jpg');
   }
 
   .options__button {
@@ -316,12 +318,14 @@
     padding-bottom: 290px;
     padding-left: 75px;
 
-    background-image: url('../img/options/index-can-desktop@1x.png'), url('../img/options/index-background-desktop@1x.jpg');
-    background-repeat: no-repeat, no-repeat;
-    background-position: 63.1% 142px, top right;
-    background-size: 552px 499px, 50%;
+    background-image: url($optionsPath + 'index-can-desktop@1x.png'),
+    url($optionsPath + 'index-background-desktop@1x.jpg'),
+    linear-gradient(to right, white 50%, $hoverGreenColor 50%);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: calc(50% + 117px) 142px, top right, 100% 100%;
+    background-size: 552px 499px, 50%, 100% 100%;
 
-    @include retinaTwoBgr('../img/options/index-can-desktop@2x.png', '../img/options/index-background-desktop@2x.jpg');
+    @include retinaTwoBgr($optionsPath + 'index-can-desktop@2x.png', $optionsPath + 'index-background-desktop@2x.jpg');
   }
 
   .options__list {

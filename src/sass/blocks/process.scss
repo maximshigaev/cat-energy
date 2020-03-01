@@ -1,0 +1,177 @@
+.process {
+  padding-top: 16px;
+  padding-bottom: 20px;
+}
+
+.process__heading {
+  margin-bottom: 32px;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 60px;
+}
+
+.process__item {
+  position: relative;
+
+  min-height: 54px;
+  margin-bottom: 26px;
+  padding-left: 80px;
+
+  font-size: 14px;
+  font-family: $subFont;
+  color: $subBlackFontColor;
+
+  &::before {
+    top: -2px;
+    left: 0;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: $mainGreenColor;
+
+    @include pseudoElement();
+  }
+
+  &::after {
+    top: 3px;
+    left: 5px;
+
+    width: 50px;
+    height: 50px;
+
+    background-size: 50px 50px;
+
+    @include pseudoElement();
+  }
+
+  &--leaf {
+    &::after {
+      background-image: url($processPath + 'advantage-leaf@1x.png');
+
+      @include retinaOneBgr($processPath + 'advantage-leaf@2x.png');
+    }
+  }
+
+  &--powder {
+    &::after {
+      background-image: url($processPath + 'advantage-powder@1x.png');
+
+      @include retinaOneBgr($processPath + 'advantage-powder@2x.png');
+    }
+  }
+
+  &--dining {
+    &::after {
+      background-image: url($processPath + 'advantage-dining@1x.png');
+
+      @include retinaOneBgr($processPath + 'advantage-dining@2x.png');
+    }
+  }
+
+  &--clock {
+    &::after {
+      background-image: url($processPath + 'advantage-clock@1x.png');
+
+      @include retinaOneBgr($processPath + 'advantage-clock@2x.png');
+    }
+  }
+}
+
+.process__item--clock br {
+  display: none;
+}
+
+@media (min-width: $tabletWidth) {
+  .process__heading {
+    margin-bottom: 72px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .process__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -29px;
+    margin-bottom: -53px;
+    margin-left: -29px;
+  }
+
+  .process__item {
+    width: calc(100% / 2 - 58px);
+    min-height: 233px;
+    margin-right: 29px;
+    margin-bottom: 85px;
+    margin-left: 29px;
+    padding-top: 112px;
+    padding-right: 80px;
+    padding-left: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    background-repeat: no-repeat;
+    background-position: 124px top;
+
+    &::before {
+      top: 0;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      top: 15px;
+      left: 15px;
+    }
+
+    &--leaf {
+      background-image: url($processPath + '1.png');
+      background-size: 71px 228px;
+
+      @include retinaOneBgr($processPath + '1@2x.png');
+    }
+
+    &--powder {
+      background-image: url($processPath + '2.png');
+      background-size: 114px 230px;
+
+      @include retinaOneBgr($processPath + '2@2x.png');
+    }
+
+    &--dining {
+      background-image: url($processPath + '3.png');
+      background-size: 113px 233px;
+
+      @include retinaOneBgr($processPath + '3@2x.png');
+    }
+
+    &--clock {
+      background-image: url($processPath + '4.png');
+      background-size: 121px 228px;
+
+      @include retinaOneBgr($processPath + '4@2x.png');
+    }
+  }
+
+  .process__item--clock br {
+    display: inline;
+  }
+}
+
+@media (min-width: $desktopWidth) {
+  .process__list {
+    margin-right: -40px;
+    margin-left: -40px;
+  }
+
+  .process__item {
+    width: calc(100% / 4 - 80px);
+    margin-right: 40px;
+    margin-bottom: 35px;
+    margin-left: 40px;
+    padding-right: 0;
+  }
+}
