@@ -113,7 +113,7 @@
   }
 }
 
-.header__logo {
+.header__link[href] .header__logo {
   &:hover,
   &:focus {
     opacity: 0.8;
