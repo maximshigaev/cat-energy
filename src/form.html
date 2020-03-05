@@ -10,7 +10,7 @@
 	<title>Cat Energy</title>
 </head>
 <body>
-	<header class="header">
+	<header class="header header--static">
 		<div class="wrapper header__wrapper">
 			<nav class="header__navigation">
 				<ul class="header__list">
@@ -25,13 +25,13 @@
 						</a>
 					</li>
 					<li class="header__item header__item--menu">
-						<a class="header__link" href="index.html" title="Главная">Главная</a>
+						<a class="header__link header__link--black" href="index.html" title="Главная">Главная</a>
 					</li>
 					<li class="header__item header__item--menu">
-						<a class="header__link" href="catalog.html" title="Каталог продукции">Каталог продукции</a>
+						<a class="header__link header__link--black" href="catalog.html" title="Каталог продукции">Каталог продукции</a>
 					</li>
 					<li class="header__item header__item--menu header__item--current">
-						<a class="header__link">Подбор программы</a>
+						<a class="header__link header__link--black">Подбор программы</a>
 					</li>
 				</ul>
 				<button class="hidden header__closeButton">
@@ -45,7 +45,101 @@
 			</nav>
 		</div>
 	</header>
-	<footer class="footer">
+	<main>
+		<section class="request">
+			<h1 class="request__heading">Подбор программы</h1>
+			<p class="request__intro">Заполните анкету и мы подберем
+			программу питания для вашего кота</p>
+			<form class="request__form">
+				<fieldset class="request__personal">
+					<label class="request__label request__label--wrap">Имя:*
+						<input type="text" placeholder="Барсик">
+					</label>
+					<label class="request__label request__label--wrap">Вес&nbsp;(кг):*
+						<input type="text" placeholder="7">
+					</label>
+					<label class="request__label request__label--wrap">Возраст&nbsp;(лет):
+						<input type="text" placeholder="7">
+					</label>
+				</fieldset>
+				<fieldset class="request__type">
+					<input class="visuallyHidden" type="radio" name="type" id="slim" checked>
+					<label class="request__label request__label--peer request__label--radio" for="slim">Похудение</label>
+					<input class="visuallyHidden" type="radio" name="type" id="mass">
+					<label class="request__label request__label--peer request__label--radio" for="mass">Набор массы</label>
+					<input class="visuallyHidden" type="radio" name="type" id="hard">
+					<label class="request__label request__label--peer request__label--radio" for="hard">Не знаю (Нужен ваш совет)</label>
+				</fieldset>
+				<fieldset class="request__contacts">
+					<legend class="request__legend">Контактные данные (владельца кота)</legend>
+					<label class="request__label request__label--wrap request__label--email">E&#8209;mail:*
+						<input type="email" placeholder="kuklachev@gmail.com">
+						<svg width="17" height="13">
+							<use xlink:href="img/sprite.svg#mail"></use>
+						</svg>
+					</label>
+					<label class="request__label request__label--wrap request__label--tel">Телефон:*
+						<input type="tel" placeholder="8 (960) 900-60-90">
+						<svg width="20" height="20">
+							<use xlink:href="img/sprite.svg#phone"></use>
+						</svg>
+					</label>
+				</fieldset>
+				<div class="request__comments">
+					<h2 class="request__legend">Комментарий</h2>
+					<textarea class="request__textarea" name="comment"
+						placeholder="Расскажите обо всех повадках кота"></textarea>
+				</div>
+				<fieldset class="request__complement">
+					<legend class="request__legend">Дополнительно</legend>
+					<input class="visuallyHidden" type="checkbox" name="sugar" id="sugar" checked>
+					<label class="request__label request__label--peer request__label--checkbox" for="sugar">Сахарозаменитель
+						<svg width="21" height="16">
+							<use xlink:href="img/sprite.svg#tick"></use>
+						</svg>
+					</label>
+					<input class="visuallyHidden" type="checkbox" name="water" id="water">
+					<label class="request__label request__label--peer request__label--checkbox" for="water">Питьевая вода
+						<svg width="21" height="16">
+							<use xlink:href="img/sprite.svg#tick"></use>
+						</svg>
+					</label>
+					<input class="visuallyHidden" type="checkbox" name="milk" id="milk">
+					<label class="request__label request__label--peer request__label--checkbox" for="milk">Молоко
+						<svg width="21" height="16">
+							<use xlink:href="img/sprite.svg#tick"></use>
+						</svg>
+					</label>
+					<input class="visuallyHidden" type="checkbox" name="vitamins" id="vitamins">
+					<label class="request__label request__label--peer request__label--checkbox" for="vitamins">Витамины
+						<svg width="21" height="16">
+							<use xlink:href="img/sprite.svg#tick"></use>
+						</svg>
+					</label>
+				</fieldset>
+				<button class="button request__button" title="Отправить заявку">Отправить заявку</button>
+				<p class="request__clarity">* — Обязательные поля</p>
+			</form>
+		</section>
+		<section class="contacts">
+			<h2 class="visuallyHidden">Наши контакты</h2>
+			<div class="contacts__container contacts__container--grey">
+				<p class="contacts__intro">Приглашаем <br> к сотрудничеству дилеров!</p>
+				<address class="contacts__address">
+					ул. Большая Конюшенная, д.&nbsp;19/8 <span>Санкт-Петербург</span>
+				</address>
+			</div>
+			<div class="contacts__map">
+				<iframe class="contacts__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.
+					603625300295!2d30.320858715957424!3d59.93871916905443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.	1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L
+					3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!
+					4v1583130603431!5m2!1sru!2sru" width="600" height="450"
+				>
+				</iframe>
+			</div>
+		</section>
+	</main>
+	<footer class="footer footer--grey">
 		<div class="wrapper footer__wrapper">
 			<a class="footer__logoLink" href="index.html" title="На главную">
 				<svg width="130" height="25">

@@ -211,6 +211,10 @@
 
     width: 100%;
     padding-top: 54px;
+
+    &--static {
+      position: static;
+    }
   }
 
   .header__wrapper {
@@ -236,9 +240,17 @@
   .header__link {
     font-size: 20px;
     color: #ffffff;
+
+    &--black {
+      color: $blackFontColor;
+    }
   }
 
   .header__item--current .header__link {
     border-bottom: 2px solid white;
+  }
+
+  .header__item--current .header__link--black {
+    border-bottom: 2px solid $mainGreenColor;
   }
 }

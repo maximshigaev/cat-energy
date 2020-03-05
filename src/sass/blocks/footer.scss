@@ -82,6 +82,10 @@
 @media (min-width: $tabletWidth) {
   .footer {
     padding-top: 63px;
+
+    &--grey {
+      background-color: $buttonColor;
+    }
   }
 
   .footer__wrapper {
