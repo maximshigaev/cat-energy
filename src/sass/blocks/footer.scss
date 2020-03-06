@@ -1,5 +1,9 @@
 .footer {
   padding-top: 37px;
+
+  &--grey {
+    background-color: $buttonColor;
+  }
 }
 
 .footer__logoLink {
@@ -25,8 +29,8 @@
   font-size: 0;
   text-align: center;
 
-  border-top: 1px solid $buttonColor;
-  border-bottom: 1px solid $buttonColor;
+  border-top: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
 }
 
 .footer__item {
@@ -82,10 +86,6 @@
 @media (min-width: $tabletWidth) {
   .footer {
     padding-top: 63px;
-
-    &--grey {
-      background-color: $buttonColor;
-    }
   }
 
   .footer__wrapper {
