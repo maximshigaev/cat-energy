@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" href="static/favicon-16x16.png" type="image/x-icon">
+	<link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+	<link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <title>Cat Energy</title>
+<link href="css/style.css" rel="stylesheet"></head>
+<body>
+	<header class="header">
+		<div class="wrapper header__wrapper">
+			<nav class="header__navigation">
+				<ul class="header__list">
+					<li class="header__item header__item--logo">
+						<a class="header__link">
+							<picture>
+								<source media="(min-width: 1440px)" srcset="img/header/logo-desktop.svg">
+								<source media="(min-width: 768px)" srcset="img/header/logo-tablet.svg">
+								<img class="header__logo" src="img/header/logo-mobile.svg"	alt="Логотип Cat Energy" width="190" height="38"
+								>
+							</picture>
+						</a>
+					</li>
+					<li class="header__item header__item--menu header__item--current">
+						<a class="header__link">Главная</a>
+					</li>
+					<li class="header__item header__item--menu">
+						<a class="header__link" href="catalog.html" title="Каталог продукции">Каталог продукции</a>
+					</li>
+					<li class="header__item header__item--menu">
+						<a class="header__link" href="form.html" title="Подбор программы">Подбор программы</a>
+					</li>
+				</ul>
+				<button class="hidden header__closeButton">
+					<svg width="18" height="18">
+						<use xlink:href="img/sprite.svg#cross"></use>
+					</svg>
+				</button>
+				<button class="hidden header__openButton">
+					<span></span>
+				</button>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<section class="options">
+			<div class="options__container">
+				<h1 class="options__heading">Функциональное питание для котов</h1>
+				<p class="options__question">Занялся собой? Займись котом!</p>
+				<a class="button options__button" href="form.html" title="Подобрать программу">Подобрать программу</a>
+			</div>
+			<div class="wrapper">
+				<ul class="options__list">
+					<li class="options__item options__item--slim">
+						<h2 class="options__title">Похудение</h2>
+						<p class="options__content">Ваш кот весит больше собаки и почти утратил способность лазить по
+							деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
+						</p>
+						<a class="options__link" href="catalog.html#slim" title="Каталог Slim">Каталог Slim
+							<svg width="24" height="11">
+								<use class="options__arrow" xlink:href="img/sprite.svg#arrow"></use>
+								<use class="options__arrowHover" xlink:href="img/sprite.svg#arrowHover"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="options__item options__item--pro">
+						<h2 class="options__title">Набор массы</h2>
+						<p class="options__content">Заработать авторитет среди дворовых котов и даже собак?
+							Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+						</p>
+						<a class="options__link" href="catalog.html#pro" title="Каталог Pro">Каталог Pro
+							<svg width="24" height="11">
+								<use class="options__arrow" xlink:href="img/sprite.svg#arrow"></use>
+								<use class="options__arrowHover" xlink:href="img/sprite.svg#arrowHover"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="process">
+			<div class="wrapper">
+				<h2 class="process__heading">Как это работает</h2>
+				<ul class="process__list">
+					<li class="process__item process__item--leaf">Функциональное питание содержит только полезные
+						питательные вещества.
+					</li>
+					<li class="process__item process__item--powder">Выпускается в виде порошка, который нужно лишь
+						залить кипятком и готово.
+					</li>
+					<li class="process__item process__item--dining">Замените один-два приема обычной еды на наше
+						функциональное питание.
+					</li>
+					<li class="process__item process__item--clock">Уже через месяц наслаждайтесь изменениями к лучшему
+						<br> вашего питомца!
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="example">
+			<h2 class="example__heading">Живой пример</h2>
+			<p class="example__content">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
+				Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек
+				и по-прежнему спит по 16 часов в день.
+			</p>
+			<dl class="example__list">
+				<dt class="example__term example__term--weight">Снижение веса</dt>
+				<dd class="example__description example__description--weight">5 кг</dd>
+				<dt class="example__term example__term--time">Затрачено времени</dt>
+				<dd class="example__description example__description--time">60 дней</dd>
+			</dl>
+			<p class="example__summary">Затраты на питание: <span>15&nbsp;000&nbsp;руб.</span></p>
+			<div class="example__container">
+				<div class="example__fix"></div>
+				<picture class="example__picture example__picture--before">
+					<source media="(min-width:1440px)"
+						srcset="img/example/before-desktop@1x.png 1x, img/example/before-desktop@2x.png 2x"
+					>
+					<source media="(min-width:768px)"
+						srcset="img/example/before-tablet@1x.png 1x, img/example/before-tablet@2x.png 2x"
+					>
+					<img class="example__image" src="img/example/before-mobile@1x.png"
+						srcset="img/example/before-mobile@2x.png" alt="Борис 'до'" title="Борис 'до'"
+					>
+				</picture>
+				<picture class="example__picture example__picture--after">
+					<source media="(min-width:1440px)"
+						srcset="img/example/after-desktop@1x.png 1x, img/example/after-desktop@2x.png 2x"
+					>
+					<source media="(min-width:768px)"
+						srcset="img/example/after-tablet@1x.png 1x, img/example/after-tablet@2x.png 2x"
+					>
+					<img class="example__image" src="img/example/after-mobile@1x.png"
+						srcset="img/example/after-mobile@2x.png" alt="Борис 'после'" title="Борис 'после'"
+					>
+				</picture>
+			</div>
+			<div class="example__slider">
+				<button class="example__button" tabindex="-1">Было</button>
+				<div class="example__line">
+					<div class="example__pin" tabindex="0"></div>
+				</div>
+				<button class="example__button" tabindex="-1">Стало</button>
+			</div>
+		</section>
+		<section class="contacts">
+			<h2 class="visuallyHidden">Наши контакты</h2>
+			<div class="contacts__container">
+				<p class="contacts__intro">Приглашаем <br> к сотрудничеству дилеров!</p>
+				<address class="contacts__address">
+					ул. Большая Конюшенная, д.&nbsp;19/8 <span>Санкт-Петербург</span>
+				</address>
+			</div>
+			<div class="contacts__map">
+				<iframe class="contacts__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.
+					603625300295!2d30.320858715957424!3d59.93871916905443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.	1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L
+					3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!
+					4v1583130603431!5m2!1sru!2sru" width="600" height="450"
+				>
+				</iframe>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="wrapper footer__wrapper">
+			<a class="footer__logoLink">
+				<svg width="130" height="25">
+					<use xlink:href="img/sprite.svg#footerLogo"></use>
+				</svg>
+			</a>
+			<ul class="footer__list">
+				<li class="footer__item footer__item--vk">
+					<a class="footer__link" href="https://vk.com" title="Вконтакте">
+						<svg width="22" height="12">
+							<use xlink:href="img/sprite.svg#vk"></use>
+						</svg>
+						<span class="visuallyHidden">Вконтакте</span>
+					</a>
+				</li>
+				<li class="footer__item footer__item--inst">
+					<a class="footer__link" href="https://instagram.com" title="Инстаграм">
+						<svg width="16" height="16">
+							<use xlink:href="img/sprite.svg#inst"></use>
+						</svg>
+						<span class="visuallyHidden">Инстаграм</span>
+					</a>
+				</li>
+				<li class="footer__item footer__item--fb">
+					<a class="footer__link" href="https://facebook.com" title="Фейсбук">
+						<svg width="10" height="19">
+							<use xlink:href="img/sprite.svg#fb"></use>
+						</svg>
+						<span class="visuallyHidden">Фейсбук</span>
+					</a>
+				</li>
+			</ul>
+			<p class="footer__author">
+				<a class="footer__authorLink" title="HTML Academy">
+					<span>HTML Academy</span>
+					<svg width="44" height="55.4">
+						<use xlink:href="img/sprite.svg#author"></use>
+					</svg>
+				</a>
+			</p>
+		</div>
+	</footer>
+<script type="text/javascript" src="./js/bundle.js"></script></body>
+</html>
